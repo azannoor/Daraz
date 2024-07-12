@@ -1,0 +1,211 @@
+.header-one {
+    background-color: #f85606;
+    padding-left: 10%;
+}
+
+.search-one {
+    width: 56%;
+    margin-right: 2%;
+}
+
+.search-two {
+    background-color: #ffe1d2;
+    position: absolute;
+    right: 0;
+    top: 40%;
+    transform: translateY(-40%);
+    padding: 1%;
+    width: 45px;
+    height: 28px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1%;
+}
+
+.divider-one {
+    font-weight: 600;
+    color: white;
+    font-size: 10px;
+    margin-top: 4%;
+}
+
+.top-links {
+    color: white;
+    gap: 15px;
+    font-size: small;
+}
+
+.nav-link {
+    color: white;
+    font-size: small;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 510px) {
+    .search-one {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .divider-one {
+        display: none; /* Hide the divider on smaller screens */
+    }
+}
+
+.nav-link.dropdown-toggle::after {
+    display: block;
+    color: white;
+    font-family: 'FontAwesome';
+    font-size: 15px; /* Adjust size as needed */
+    position: relative;
+    top: 12px; /* Adjust position as needed */
+    right: 1px; /* Adjust position as needed */
+}
+
+.nav-item:hover {
+    background-color: #DF4D05;
+}
+
+.small-font {
+    font-size: 0.8rem; /* Adjust the font size as needed */
+    font-weight: medium;
+}
+
+/* Add this CSS to your stylesheet or in a <style> block */
+.dropdown.dropend .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 1rem;
+    z-index: 1050;
+}
+
+.dropdown.dropend:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown.dropend .btn.dropdown-toggle:hover {
+    background-color: #f0f0f0; /* Change this to your desired background color */
+    border-radius: 0;
+    text-align: start;
+    color: orange !important; /* Change this to your desired text color */
+}
+
+.dropdown.dropend .btn.dropdown-toggle {
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    background-color: transparent; /* Transparent background initially */
+    color: #333; /* Default text color */
+    border: none; /* Remove border */
+    padding: 10px; /* Adjust padding as needed */
+    margin-bottom: -12px;
+}
+
+/* Hide the chevron icon by default */
+.dropdown.dropend .btn.dropdown-toggle i {
+    display: none;
+    color: orange;
+}
+
+/* Show the chevron icon only on hover */
+.dropdown.dropend .btn.dropdown-toggle:hover i {
+    display: inline;
+}
+@media (max-width: 767.98px) { /* Small and extra small screens */
+    .col-auto a {
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .col-auto span {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* Medium screens */
+    .col-auto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-auto a {
+        display: inline-block;
+        text-align: left;
+    }
+    .col-auto span {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) { /* Large screens */
+    .col-auto a {
+        display: flex;
+        align-items: center;
+    }
+    .col-auto span {
+        display: inline-block;
+    }
+}
+
+.custom-row {
+    display: flex;
+    justify-content: center;
+}
+.shop-more{
+
+font-weight: 500;
+    font-size: 14px;
+    float: right;
+    display: block;
+    border: 1px solid #f85606;
+    border-radius: 2px;
+    color: #f85606;
+    height: 35px;
+    background-color: transparent;
+    line-height: 35px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 11px;
+    margin-top: 13px;
+}
+
+.card-fs-content-body-unit .fs-card-title {
+height: 36px;
+line-height: 18px;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+
+overflow: hidden;
+margin-bottom: 4px;
+font-size: 14px;
+}
+.card-fs-content-body-unit .fs-card-text{
+    margin: 0 8px;
+}
+
+.card-fs-content-body-unit .fs-card-price {
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: #f85606;
+    letter-spacing: -.56px;
+    line-height: 22px;
+    height: 22px;
+}
+.card-fs-content-body-unit .fs-card-origin-price {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 4px;
+}
+.shadow-card {
+    transition: box-shadow ;
+
+  }
+  
+  .shadow-card:hover {
+    box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+  }
+
+        
