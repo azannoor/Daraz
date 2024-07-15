@@ -10,6 +10,7 @@
       <!-- Latest compiled JavaScript -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <!-- Custom CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <link href="style.css" rel="stylesheet">
    </head>
    <header>
@@ -18,28 +19,76 @@
          <div class="d-flex ms-3 top-links">
             <a class="nav-link" href="#">Become a seller</a>
             <a class="nav-link" href="#">Daraz Affiliate Program</a>
-            <a class="nav-link" href="#">Help & Support</a>
+            <div class="nav-link help-dropdown">
+               <a class="nav-link help-dropdown-toggle" href="#" id="helpSupport" role="button">Help & Support</a>
+               <div class="help-dropdown-menu" aria-labelledby="helpSupport">
+                   <ul class="help-list">
+                       <li class="help-item">
+                           <a href="//helpcenter.daraz.pk" class="help-item-anchor">
+                               <span class="help-icon help-center"></span>
+                               Help Center
+                           </a>
+                       </li>
+                       <li class="help-item">
+                           <a href="//ai.alimebot.daraz.pk/intl/index.htm?from=GOE3puhQ74&amp;_lang=en-PK" class="help-item-anchor">
+                               <span class="help-icon chatbot"></span>
+                               Chat with Us
+                           </a>
+                       </li>
+                       <li class="help-item">
+                           <a href="//helpcenter.daraz.pk/page/knowledge?pageId=12&amp;category=1000001082" class="help-item-anchor">
+                               <span class="help-icon returns-refunds"></span>
+                               Order
+                           </a>
+                       </li>
+                       <li class="help-item">
+                           <a href="//helpcenter.daraz.pk/page/knowledge?pageId=12&amp;category=1000001092" class="help-item-anchor">
+                               <span class="help-icon shipping-delivery"></span>
+                               Shipping & Delivery
+                           </a>
+                       </li>
+                       <li class="help-item">
+                           <a href="//helpcenter.daraz.pk/page/knowledge?pageId=12&amp;category=1000001087" class="help-item-anchor">
+                               <span class="help-icon order-payment"></span>
+                               Payment
+                           </a>
+                       </li>
+                       <li class="help-item">
+                           <a href="//www.daraz.pk/wow/i/pk/help/how-to-return?spm=a2a0e.12026507.3805025330.1.10643c01YcOvq4&amp;hybrid=1" class="help-item-anchor">
+                               <span class="help-icon refund-money"></span>
+                               Returns & Refunds
+                           </a>
+                       </li>
+                       <li class="help-item">
+                           <a href="//www.daraz.pk/wow/i/pk/help/purchase-protection?hybrid=1" class="help-item-anchor">
+                               <span class="help-icon purchase-protection"></span>
+                               Purchase Protection
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
             <a class="nav-link" href="#">Daraz Logistics Partner</a>
          </div>
          <nav class="navbar navbar-expand-md" style="background-color: #F85606;">
             <div class="container-fluid">
                <img src="https://icms-image.slatic.net/images/ims-web/e650d6ca-1841-4646-b0e9-4ddbf2beb731.png" class="navbar-brand" style="height: 56px; width: 105px;margin: 0;"></img>
                <!-- Search bar with icon -->
-               <form class="ms-3 search-one">
-                  <div class="input-group">
-                     <input type="search" class="form-control" placeholder="Search in Daraz" aria-label="Search" style="border-radius: 10px;">
-                     <div class="search-two">
-                        <img src="./assets/magnifying-glass-solid.svg" style="width: 15px; height: 15px;">
-                     </div>
-                  </div>
-               </form>
+               <div class="search-bar" >
+                  <form class="search" action="">
+                      <input type="text" class="form-control" placeholder="Search in Daraz">
+                      <div class="search-icon-container">
+                          <img src="./assets/magnifying-glass-solid.svg" style="width: 15px;">
+                      </div>
+                  </form>
+              </div>
                <!-- Toggler button for small screens -->
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
                <!-- Navbar links -->
                <div class="collapse navbar-collapse " id="navbarNav">
-                  <ul class="navbar-nav">
+                  <ul class="navbar-nav" >
                      <li class="nav-item ">
                         <div class="d-flex align-items-center df">
                            <img src="https://img.alicdn.com/imgextra/i4/O1CN01kwkROp1vjm0trG3sl_!!6000000006209-2-tps-72-72.png" alt="" style="width: 20px;height: 20px;">
@@ -79,119 +128,175 @@
    <body>
       <div class="container-fluid" style="background-color: #F5F5F5;">
          <div class="row justify-content-center">
-            <div class="col-lg-2  col-sm-12 col-12 ms-5 mb-3" style="margin-right: -0.46%;">
+            <div class="col-lg-2 col-sm-12 col-12 ms-5 mb-3" style="margin-right: -0.46%;">
                <!-- 12 Dropend Buttons -->
                <div style="border-radius: 4%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: white;">
                   <div class="dropdown dropend" style="margin-top: 5%;">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton1" aria-haspopup="true" aria-expanded="false">
-                     Groceries & Pets
+                     <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton1" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown">
+                         <i class="fas fa-shopping-basket me-2"></i>
+                         Groceries & Pets
                      </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton1">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
+                     <div class="dropdown-menu dropend" aria-labelledby="dropendMenuButton1">
+                         <a class="dropdown-item" href="#" id="item1">Item 1</a>
+                         <div class="dropdown-menu" aria-labelledby="item1" id="first-menu" >
+                             <a class="dropdown-item" href="#">
+                             <div>
+                                        <a href="//www.daraz.pk/cereal/" class="catLink">
+                                        
+                                            <img src="//icms-image.slatic.net/images/ims-web/596c193f-f061-4a25-a35d-5f3aa2e72c82.jpg" data-ks-lazyload="//icms-image.slatic.net/images/ims-web/596c193f-f061-4a25-a35d-5f3aa2e72c82.jpg" alt="Breakfast Cereals" class="catCircleImg">
+                                        
+                                            <span>Breakfast Cereals</span>
+                                        </a>
+                                    
+                                        </div>
+                             </a>
+                             <a class="dropdown-item" href="#">Subitem 2</a>
+                         </div>
+                         <a class="dropdown-item" href="#">Item 2</a>
                      </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton2" aria-haspopup="true" aria-expanded="false">
+                 </div>
+                 
+                 <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                      const item1 = document.getElementById('item1');
+                      item1.addEventListener('click', function (event) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          const nestedDropdown = item1.nextElementSibling;
+                          nestedDropdown.classList.toggle('show');
+                      });
+              
+                      // Close dropdowns when clicking outside
+                      document.addEventListener('click', function (event) {
+                          const isDropdownToggle = event.target.closest('.dropdown-toggle');
+                          if (!isDropdownToggle) {
+                              document.querySelectorAll('.dropdown-menu').forEach(function (dropdownMenu) {
+                                  dropdownMenu.classList.remove('show');
+                              });
+                          }
+                      });
+                  });
+              </script>
+              
+              
+                               
+                 
+                
+                 
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-spa me-2"></i>
                      Health & Beauty
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton2">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton3" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton2">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-shirt me-2"></i>
                      Men's Fashion
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton3">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton4" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton3">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-shirt me-2" aria-hidden="true"></i>
                      Women's Fashion
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton4">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton5" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton4">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-feather me-2"></i>
                      Mother & Baby
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton5">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton6" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton5">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fas fa-shopping-basket me-2"></i>
                      Home & Lifestyle
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton6">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton7" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton6">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-spa me-2"></i>
                      Electronic Devices
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton7">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton8" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton7">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton8" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-shirt me-2"></i>
                      Electronic Accessories
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton8">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton9" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton8">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton9" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-shirt me-2" aria-hidden="true"></i>
                      TV & Home Appliances
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton9">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton10" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton9">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton10" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-shirt me-2"></i>
                      Sports & Outdoors
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton10">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" type="button" id="dropendMenuButton11" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton10">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" type="button" id="dropendMenuButton11" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-shirt me-2"></i>
                      Watches, Bags & Jewelry
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton11">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
-                  <div class="dropdown dropend">
-                     <button class="btn dropdown-toggle small-font text-secondary" style="margin-bottom: 1%;" type="button" id="dropendMenuButton12" aria-haspopup="true" aria-expanded="false">
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton11">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
+                 <div class="dropdown dropend">
+                   <button class="btn dropdown-toggle small-font text-secondary d-flex align-items-center" style="margin-bottom: 1%;" type="button" id="dropendMenuButton12" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa-solid fa-shirt me-2"></i>
                      Automotive & Motorbike
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropendMenuButton12">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                     </div>
-                  </div>
+                   </button>
+                   <div class="dropdown-menu" aria-labelledby="dropendMenuButton12">
+                     <a class="dropdown-item" href="#">Item 1</a>
+                     <a class="dropdown-item" href="#">Item 2</a>
+                   </div>
+                 </div>
                </div>
-            </div>
+             </div>
+             
+           
             <div class="col-lg-8  col-sm-12 col-12" style="margin-top: 0.8%; padding-right: 4%;">
                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-indicators">
@@ -265,9 +370,9 @@
          </div>
       </div>
       <div class="container-fluid" style="background-color: #F5F5F5;">
-        <h3 style="margin-left: 9%;">Categories</h3>
+         <h3 style="margin-left: 9%;">Categories</h3>
          <div class="row justify-content-center">
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div  id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://pk-live-21.slatic.net/kf/S1184b4434254417e9b96bc614d88fddcQ.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -277,7 +382,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://pk-live-21.slatic.net/kf/S2e47d279a1bc43618c730d6f0674f007U.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -287,7 +392,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/755a31aa4d785370f30d9579434fd931.png" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -297,7 +402,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/4ad1170ab8245788a835425d13c02dca.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -307,7 +412,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/edb91d8d02a9394cf8ad06bbdf576ba9.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -317,7 +422,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/32a2a43da4f4346f9ecd74778b3733f8.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -327,7 +432,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/original/87b4327f118eb14b3db73fc88a27031e.jpg" style="width: 90px;height: 90px;" alt="Wardrobe Organisers">
                </div>
@@ -337,7 +442,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/98d04d8dc283c1f5604c27448e254753.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -349,17 +454,17 @@
             </div>
          </div>
          <div class="row justify-content-center">
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://pk-live-21.slatic.net/kf/S1184b4434254417e9b96bc614d88fddcQ.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
-               <div class="text-center"style="white-space: normal; " >
+               <div id="wardrobe-organisers" class="text-center"style="white-space: normal; " >
                   <span style="font-size:15px ;font-weight: 400;">
                   Wardrobe Organisers
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://pk-live-21.slatic.net/kf/S2e47d279a1bc43618c730d6f0674f007U.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -369,7 +474,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/755a31aa4d785370f30d9579434fd931.png" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -379,7 +484,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/4ad1170ab8245788a835425d13c02dca.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -389,7 +494,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/edb91d8d02a9394cf8ad06bbdf576ba9.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -399,7 +504,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/32a2a43da4f4346f9ecd74778b3733f8.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -409,7 +514,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/original/87b4327f118eb14b3db73fc88a27031e.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -419,7 +524,7 @@
                   </span>
                </div>
             </div>
-            <div class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-bottom: 1px solid #CDCDCD;" >
+            <div id="wardrobe-organisers" class="col-6 col-md-1 bg-white d-flex flex-column align-items-center justify-content-center " style="padding-left: 5%;padding-right: 5%;padding-top: 1%;border-bottom: 1px solid #CDCDCD;" >
                <div >
                   <img class="image" src="https://static-01.daraz.pk/p/98d04d8dc283c1f5604c27448e254753.jpg" style="width: 85px;height: 85px;" alt="Wardrobe Organisers">
                </div>
@@ -431,156 +536,706 @@
             </div>
          </div>
       </div>
-
-      
-  
-    <div class="container-fluid " style="background-color: #F5F5F5;padding-top: 2%;">
-        <div class="row justify-content-center ms-3" style="margin-right: 1%;"   >
+      <div class="container-fluid" style="background-color: #F5F5F5; padding-top: 2%;">
+         <!-- First Row -->
+         <h3 style="margin-left: 9%; font-size: x-large;">Flash Sale</h3>
          
-      
-            <div class="col-2 bg-white align-content-center"style="padding-top: 1%;padding-bottom:0.5%;border-bottom: 1px solid #EAEAEA;" >
-                <div ><div class="fs-status-text" style="font-weight: 500;
-                  font-size: 14px;
-                  color: #f85606;">On Sale Now</div></div>
-            </div>
-            <div class="col-2 d-flex align-items-center bg-white" style="padding-top: 1%;padding-bottom:0.5%;border-bottom: 1px solid #EAEAEA;">
-                
-                  <div  style="color: undefined">Ending in</div>
-                  <div  style="background-color: #ff6801; padding: 4%;">07</div>
-                  <div  style="color: #ff6801;"> : </div>
-                  <div  style="background-color: #ff6801;padding: 4%; ">36</div>
-                  <div  style="color: #ff6801"> : </div>
-                  <div  style="background-color: #ff6801; padding: 4%;">48</div>
-               
-            </div>
-            <div class="col-6 bg-white align-items-center" style="border-bottom: 1px solid #EAEAEA;padding-bottom:1%;">
-                <div ><a class="shop-more "  style="color: #f57224; border-color: #f57224" href="">SHOP MORE</a></div>
-            </div>
-        </div>
-        <div class="row bg-white justify-content-center" >
-         <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card" style="width: 12.5%;">
-            <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
-              <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
-                <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-              </div>
-              <div class="fs-card-text">
-                <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
-                <div class="fs-card-price">
-                  <span class="currency">Rs.</span><span class="price">147509</span>
-                </div>
-                <div class="fs-card-origin-price">
-                  <span class="fs-origin-price">
-                    <span class="currency">Rs.</span><span class="price">289000</span>
-                  </span>
-                  <span class="fs-discount">-48%</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
-            <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
-              <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
-                <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-              </div>
-              <div class="fs-card-text">
-                <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
-                <div class="fs-card-price">
-                  <span class="currency">Rs.</span><span class="price">147509</span>
-                </div>
-                <div class="fs-card-origin-price">
-                  <span class="fs-origin-price">
-                    <span class="currency">Rs.</span><span class="price">289000</span>
-                  </span>
-                  <span class="fs-discount">-48%</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
-            <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
-              <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
-                <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-              </div>
-              <div class="fs-card-text">
-                <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
-                <div class="fs-card-price">
-                  <span class="currency">Rs.</span><span class="price">147509</span>
-                </div>
-                <div class="fs-card-origin-price">
-                  <span class="fs-origin-price">
-                    <span class="currency">Rs.</span><span class="price">289000</span>
-                  </span>
-                  <span class="fs-discount">-48%</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
-            <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
-              <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
-                <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-              </div>
-              <div class="fs-card-text">
-                <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
-                <div class="fs-card-price">
-                  <span class="currency">Rs.</span><span class="price">147509</span>
-                </div>
-                <div class="fs-card-origin-price">
-                  <span class="fs-origin-price">
-                    <span class="currency">Rs.</span><span class="price">289000</span>
-                  </span>
-                  <span class="fs-discount">-48%</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
-            <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
-              <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
-                <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-              </div>
-              <div class="fs-card-text">
-                <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
-                <div class="fs-card-price">
-                  <span class="currency">Rs.</span><span class="price">147509</span>
-                </div>
-                <div class="fs-card-origin-price">
-                  <span class="fs-origin-price">
-                    <span class="currency">Rs.</span><span class="price">289000</span>
-                  </span>
-                  <span class="fs-discount">-48%</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
-            <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
-              <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
-                <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-              </div>
-              <div class="fs-card-text">
-                <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
-                <div class="fs-card-price">
-                  <span class="currency">Rs.</span><span class="price">147509</span>
-                </div>
-                <div class="fs-card-origin-price">
-                  <span class="fs-origin-price">
-                    <span class="currency">Rs.</span><span class="price">289000</span>
-                  </span>
-                  <span class="fs-discount">-48%</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          
-    
-    
-  
-  
-  <!-- Repeat for other cards -->
+<div class="row justify-content-center mx-lg-3  card-margin-left"style="width: auto%;" >
+     
+   <div class="col-12 col-md-4 col-lg-2 bg-white d-flex align-items-center justify-content-center" style="padding: 1% 0.5%; border-bottom: 1px solid #EAEAEA;">
+       <div class="fs-status-text " style="font-weight: 500; font-size: 14px; color: #f85606; margin-right: 50%;">On Sale Now</div>
+   </div>
+   <div class="col-12 col-md-2 col-lg-2 d-flex align-items-center justify-content-center bg-white" style="padding: 1% 0.5%; border-bottom: 1px solid #EAEAEA;">
+    <div style="padding-right: 2%;">Ending in</div>
+    <div id="hours" style="background-color: #ff6801; padding: 4%; border-radius: 7%;">07</div>
+    <div style="color: #ff6801;"> : </div>
+    <div id="minutes" style="background-color: #ff6801; padding: 4%; border-radius: 7%;">36</div>
+    <div style="color: #ff6801;"> : </div>
+    <div id="seconds" style="background-color: #ff6801; padding: 4%; border-radius: 7%;">48</div>
 </div>
 
-    </div>
+   <div class="col-12 col-md-6 col-lg-6 bg-white d-flex align-items-center justify-content-center" style="border-bottom: 1px solid #EAEAEA; padding-bottom: 1%;">
+       <a class="shop-more" style="color: #f57224; border-color: #f57224; margin-left: 85%; margin-right: auto;" href="">SHOP</a>
+   </div>
+</div>
+        
+    <script>
+          function startTimer(duration, display) {
+    var timer = duration, hours, minutes, seconds;
+    setInterval(function () {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.querySelector('#hours').textContent = hours;
+        display.querySelector('#minutes').textContent = minutes;
+        display.querySelector('#seconds').textContent = seconds;
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+window.onload = function () {
+    var endTime = new Date("July 15, 2024 23:59:59").getTime(); // Set your end time here
+    var now = new Date().getTime();
+    var remainingTime = (endTime - now) / 1000; // Time in seconds
+    var display = document.querySelector('.col-12.col-md-2.col-lg-2');
+    startTimer(remainingTime, display);
+};
+    </script>
+
+         <!-- Second Row -->
+         <div class="row bg-white justify-content-center card-margin-left"  >
+            <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
+               <a  class="card-fs-content-body-unit">
+                  <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
+                     <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                  </div>
+                  <div class="fs-card-text">
+                     <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
+                     <div class="fs-card-price">
+                        <span class="currency">Rs.</span><span class="price">147509</span>
+                     </div>
+                     <div class="fs-card-origin-price">
+                        <span class="fs-origin-price">
+                           <span class="currency">Rs.</span><span class="price">289000</span>
+                        </span>
+                        <span class="fs-discount">-48%</span>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            
+            <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
+               <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
+                  <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
+                     <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                  </div>
+                  <div class="fs-card-text">
+                     <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
+                     <div class="fs-card-price">
+                        <span class="currency">Rs.</span><span class="price">147509</span>
+                     </div>
+                     <div class="fs-card-origin-price">
+                        <span class="fs-origin-price">
+                        <span class="currency">Rs.</span><span class="price">289000</span>
+                        </span>
+                        <span class="fs-discount">-48%</span>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
+               <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
+                  <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
+                     <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                  </div>
+                  <div class="fs-card-text">
+                     <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
+                     <div class="fs-card-price">
+                        <span class="currency">Rs.</span><span class="price">147509</span>
+                     </div>
+                     <div class="fs-card-origin-price">
+                        <span class="fs-origin-price">
+                        <span class="currency">Rs.</span><span class="price">289000</span>
+                        </span>
+                        <span class="fs-discount">-48%</span>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
+               <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
+                  <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
+                     <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                  </div>
+                  <div class="fs-card-text">
+                     <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
+                     <div class="fs-card-price">
+                        <span class="currency">Rs.</span><span class="price">147509</span>
+                     </div>
+                     <div class="fs-card-origin-price">
+                        <span class="fs-origin-price">
+                        <span class="currency">Rs.</span><span class="price">289000</span>
+                        </span>
+                        <span class="fs-discount">-48%</span>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
+               <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
+                  <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
+                     <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                  </div>
+                  <div class="fs-card-text">
+                     <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
+                     <div class="fs-card-price">
+                        <span class="currency">Rs.</span><span class="price">147509</span>
+                     </div>
+                     <div class="fs-card-origin-price">
+                        <span class="fs-origin-price">
+                        <span class="currency">Rs.</span><span class="price">289000</span>
+                        </span>
+                        <span class="fs-discount">-48%</span>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4 shadow-card">
+               <a href="//www.daraz.pk/products/hm-tmc130-om01-i228084128-s2186132199.html" class="card-fs-content-body-unit hp-mod-card-hover J_FSItemUnit">
+                  <div class="fs-card-img-container" style="width: 100%; height: 180px; overflow: hidden;">
+                     <img class="fs-card-img img-fluid" alt="JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                  </div>
+                  <div class="fs-card-text">
+                     <div class="fs-card-title">JCBuckman RefreshUS Massage Chair with Head Massager and 6 Auto Programs</div>
+                     <div class="fs-card-price">
+                        <span class="currency">Rs.</span><span class="price">147509</span>
+                     </div>
+                     <div class="fs-card-origin-price">
+                        <span class="fs-origin-price">
+                        <span class="currency">Rs.</span><span class="price">289000</span>
+                        </span>
+                        <span class="fs-discount">-48%</span>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <!-- Repeat the same card structure for other cards -->
+         </div>
+      </div>
+      <div class="container-fluid" style="background-color: #F5F5F5; padding-top: 2%;">
+         <div class="row d-flex" style="width: 100%;padding-left: 9%;padding-right: 8%;">
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+              <!-- Item1 -->
+              <div class="grid-item" style="width: 55%;background-color: white;">
+                <div style="width: 100%">
+                  <img style="width: 100%" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="" />
+                </div>
+                <div>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      padding-right: 2%;
+                      font-size: 14px;
+                    "
+                  >
+                    JCBuckman RefreshUS Massage Chair with Head....
+                  </p>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      color: #f85656;
+                      font-size: 18px;
+                    "
+                  >
+                    RS.155820
+                  </p>
+                  <div class="d-flex">
+                    <p
+                      style="
+                        text-decoration: line-through;
+                        padding-left: 2%;
+                        font-size: 12px;
+                      "
+                    >
+                      Rs.289000
+                    </p>
+                    <p style="font-size: 12px">-46%</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item2 -->
+              <div class="grid-item" style="margin-left: 5%; width: 55%;background-color: white">
+                <div style="width: 100%">
+                  <img style="width: 100%" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="" />
+                </div>
+                <div>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      padding-right: 2%;
+                      font-size: 14px;
+                    "
+                  >
+                    JCBuckman RefreshUS Massage Chair with Head....
+                  </p>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      color: #f85656;
+                      font-size: 18px;
+                    "
+                  >
+                    RS.155820
+                  </p>
+                  <div class="d-flex">
+                    <p
+                      style="
+                        text-decoration: line-through;
+                        padding-left: 2%;
+                        font-size: 12px;
+                      "
+                    >
+                      Rs.289000
+                    </p>
+                    <p style="font-size: 12px">-46%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+              <!-- Item3 -->
+              <div class="grid-item" style="padding-left: 1%;background-color: white; width: 55%">
+                <div style="width: 100%">
+                  <img style="width: 100%" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="" />
+                </div>
+                <div>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      padding-right: 2%;
+                      font-size: 14px;
+                    "
+                  >
+                    JCBuckman RefreshUS Massage Chair with Head....
+                  </p>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      color: #f85656;
+                      font-size: 18px;
+                    "
+                  >
+                    RS.155820
+                  </p>
+                  <div class="d-flex">
+                    <p
+                      style="
+                        text-decoration: line-through;
+                        padding-left: 2%;
+                        font-size: 12px;
+                      "
+                    >
+                      Rs.289000
+                    </p>
+                    <p style="font-size: 12px">-46%</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item4 -->
+              <div class="grid-item" style="background-color: white;margin-left: 5%; width: 55%">
+                <div style="width: 100%">
+                  <img style="width: 100%" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="" />
+                </div>
+                <div>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      padding-right: 2%;
+                      font-size: 14px;
+                    "
+                  >
+                    JCBuckman RefreshUS Massage Chair with Head....
+                  </p>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      color: #f85656;
+                      font-size: 18px;
+                    "
+                  >
+                    RS.155820
+                  </p>
+                  <div class="d-flex">
+                    <p
+                      style="
+                        text-decoration: line-through;
+                        padding-left: 2%;
+                        font-size: 12px;
+                      "
+                    >
+                      Rs.289000
+                    </p>
+                    <p style="font-size: 12px">-46%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+              <!-- Item5 -->
+              <div class="grid-item" style="background-color: white; width: 55%">
+                <div style="width: 100%">
+                  <img style="width: 100%" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="" />
+                </div>
+                <div>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      padding-right: 2%;
+                      font-size: 14px;
+                    "
+                  >
+                    JCBuckman RefreshUS Massage Chair with Head....
+                  </p>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      color: #f85656;
+                      font-size: 18px;
+                    "
+                  >
+                    RS.155820
+                  </p>
+                  <div class="d-flex">
+                    <p
+                      style="
+                        text-decoration: line-through;
+                        padding-left: 2%;
+                        font-size: 12px;
+                      "
+                    >
+                      Rs.289000
+                    </p>
+                    <p style="font-size: 12px">-46%</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item6 -->
+              <div class="grid-item" style="background-color: white;margin-left: 5%; width: 55%">
+                <div style="width: 100%">
+                  <img style="width: 100%" src="https://static-01.daraz.pk/p/aa7d58350d029c3cfaa8131a7e6771d5.jpg" alt="" />
+                </div>
+                <div>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      padding-right: 2%;
+                      font-size: 14px;
+                    "
+                  >
+                    JCBuckman RefreshUS Massage Chair with Head....
+                  </p>
+                  <p
+                    style="
+                      margin: 0;
+                      padding-left: 2%;
+                      color: #f85656;
+                      font-size: 18px;
+                    "
+                  >
+                    RS.155820
+                  </p>
+                  <div class="d-flex">
+                    <p
+                      style="
+                        text-decoration: line-through;
+                        padding-left: 2%;
+                        font-size: 12px;
+                      "
+                    >
+                      Rs.289000
+                    </p>
+                    <p style="font-size: 12px">-46%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+
+
+      <div class="container-fluid" style="background-color: #F5F5F5; padding-top: 2%;">
+         <div class="container" style="background-color: #F5F5F5; padding-top: 2%;margin-left:8%">
+            <div class="row" style="padding-top: 30px; padding-bottom: 40px;">
+               <div class="col-md-6 col-lg-3 above-footer-1">
+                   <h4>Customer Care</h4>
+   
+                   <a href="">Help Center</a>
+                   <a href="">How to Buy
+                   </a>
+                   <a href="">Corporate & Bulk Purchasing
+                   </a>
+                   <a href="">Returns & Refunds
+                   </a>
+                   <a href="">Daraz Shop
+                   </a>
+                   <a href="">Contact Us
+                   </a>
+                   <a href="">Purchase Protection
+                   </a>
+                   <a href="">Daraz Pick up Points
+                   </a>
+   
+                   <br>
+                   <h4>Make Money With Us</h4>
+                   <a href="">Daraz University
+                   </a>
+                   <a href="">Sell on Daraz
+                   </a>
+                   <a href="">Join Daraz Affiliate Program
+                   </a>
+               </div>
+   
+               <div class="col-md-6 col-lg-3 above-footer-1">
+                   <h4>Daraz</h4>
+                   <a href="">About Us
+                   </a>
+                   <a href="">Digital Payments
+                   </a>
+                   <a href="">Daraz Donates
+                   </a>
+                   <a href="">Daraz Blog
+                   </a>
+                   <a href="">Terms & Conditions
+                   </a>
+                   <a href="">Privacy Policy
+                   </a>
+                   <a href="">NTN Number : 4012118-6
+                   </a>
+                   <a href="">STRN Number : 1700401211818
+                   </a>
+                   <a href="">Online Shopping App
+                   </a>
+                   <a href="">Online Grocery Shopping
+                   </a>
+                   <a href="">Daraz Exclusive
+                   </a>
+               </div>
+   
+               <div class="col-md-6 col-lg-3 above-footer-1">
+                   <h4>Daraz International</h4>
+                   <div style="display: flex;">
+                       <div style="display: flex; width: 50%;">
+                           <span class="links icon-pk" style="height: 90px; width: 90px; "></span>
+                           <p style="padding-left: 2px; margin-top: 2px;">Pakistan </p>
+                       </div>
+   
+                       <div style="display: flex;">
+                           <span class="links icon-bd" style="height: 90px; width: 90px;"></span>
+                           <p style="padding-left: 2px; margin-top: 2px;">Bangladesh</p>
+                       </div>
+                   </div>
+   
+                   <div style="display: flex;">
+                       <div style="display: flex; width: 50%;">
+                           <span class="links icon-sl" style="height: 90px; width: 90px; "></span>
+                           <p style="padding-left: 2px; margin-top: 2px;">Sri Lanka </p>
+                       </div>
+   
+                       <div style="display: flex;">
+                           <span class="links icon-mm" style="height: 90px; width: 90px;"></span>
+                           <p style="padding-left: 2px; margin-top: 2px;">Myanmar</p>
+                       </div>
+                   </div>
+   
+                   <div style="display: flex;">
+                       <div style="display: flex; width: 50%;">
+                           <span class="links icon-np" style="height: 90px; width: 90px;"></span>
+                           <p style="padding-left: 2px; margin-top: 2px;">Nepal</p>
+                       </div>
+                   </div>
+                   <br>
+                   <h4>Payment Methods</h4>
+                   <div style="display: flex;">
+                       <span class="links payment-icon-cod" style="height: 90px; width: 140px; margin-right: 30px;"></span>
+                       <span class="links payment-icon-visa"
+                           style="height: 90px; width: 145px;  margin-right: 30px;"></span>
+                       <span class="links payment-icon-master"
+                           style="height: 90px; width: 145px;  margin-right: 30px;"></span>
+                       <span class="links payment-icon-easypaisa" style="height: 90px; width: 145px; "></span>
+                   </div>
+   
+                   <div style="display: flex; margin-top: 5px;">
+                       <span class="links payment-icon-daraz-wallet"
+                           style="height: 90px; width: 145px;   margin-right: 30px;"></span>
+                       <span class="links payment-icon-jazzcash"
+                           style="height: 90px; width: 145px;  margin-right: 30px;"></span>
+                       <span class="links payment-icon-unionpay"
+                           style="height: 90px; width: 145px;  margin-right: 30px;"></span>
+                       <span class="links payment-icon-hbl" style="height: 90px; width: 140px; border: 1px solid;"></span>
+                   </div>
+   
+                   <div style="display: flex; margin-top: 5px;">
+                       <span class="links payment-icon-installment"
+                           style="height: 90px; width: 145px;  margin-right: 30px;"></span>
+                   </div>
+   
+                   <br>
+                   <h4>Verified by</h4>
+                   <div style="display: flex; margin-top: 5px;"> <span class="links verified-icon-pci"
+                           style="height: 120px; width: 225px;  margin-right: 30px;"></span>
+   
+                   </div>
+   
+               </div>
+   
+               <div class="col-md-6 col-lg-3 above-footer-1">
+                   <h4>Exclusive Deals and Offers</h4>
+   
+                   <div style="display: flex; margin-top: 5px;">
+                       <div class="qr-code" style="width: 45%; ">
+                           <img src="https://laz-img-cdn.alicdn.com/images/ims-web/TB18aqePBLoK1RjSZFuXXXn0XXa.png" alt="">
+                       </div>
+   
+                       <div style="display: flex; flex-direction: column; width: 45%;">
+                           <span class="links app-store" style="height: 85px; width: 300px; margin-top: 15px;"></span>
+                           <span class="links play-store" style="height: 85px; width: 300px; margin-top: 15px;"></span>
+                           <span class="links huawei-store" style="height: 90px; width: 300px; margin-top: 8px;"></span>
+                       </div>
+                   </div>
+   
+                   <br>
+                   <br>
+                   <div style="display: flex;">
+                       <span class="links daraz-logo" style="height: 125px; width: 125px;">
+                       </span>
+                       <div style="display: flex; flex-direction: column; margin-left: 10px;">
+                           <span class="links happy-shopping" style=" height: 80px; width: 400px;"></span>
+                           <p style="font-size: 12px; margin-left: 2px;">Downlaod App</p>
+                       </div>
+                   </div>
+                   <br>
+                   <h4>Follow Us</h4>
+                   <div style="display: flex;">
+                       <span class="links facebook-logo" style="height: 80px; width: 80px;"></span>
+                       <span class="links twitter-logo" style="margin-left: 40px; height: 80px; width: 80px;"></span>
+                       <span class="links instagram-logo" style="margin-left: 40px; height: 80px; width: 80px;"></span>
+                       <span class="links youtube-logo" style="margin-left: 40px; height: 80px; width: 80px;"></span>
+                       <span class="links internet-logo" style="margin-left: 40px; height: 80px; width: 80px;"></span>
+                   </div>
+   
+               </div>
+   
+           </div>
+         </div>
+      </div>
+     
+      <div class="container-fluid" style="background-color: #F1F1F1;">
+         <div class="row">
+            <div class="col-md-6" style="padding-left: 9%;" >
+               <div class="row" >
+                  <div class="col-md-6">
+                     <br>
+                     <div class="custom-heading">How Daraz Transformed Online Shopping in Pakistan</div><br>
+                     <div class="custom-text">
+                        Daraz first made waves in Pakistan’s e-commerce market after its introduction in 2012. We have since grown to become Pakistan’s largest platform for online shopping with a network spread across Asia in Pakistan, Bangladesh, Sri Lanka, Myanmar, and Daraz.com.np. Our vision was to provide a safe, efficient online marketplace platform for vendors and customers across the country to come together. We started off exclusively as an online fashion retail platform and over the years expanded to become a complete one-stop solution for all your buying needs. Daraz prides itself on not being just another ecommerce venture in Asia. We work tirelessly to make sure that we provide users with the best online shopping experience and value for their purchases. Whether you shop online through our website or our online shopping mobile App, you can expect easy navigation, customized recommendations, and a smooth online shopping experience guaranteed.
+                        <br><br>
+                        <div class="custom-heading" style="font-size: 14px;">What Makes Us Different from Other Online Shopping Platforms?</div><br>
+                        <div class="custom-text">
+                           Select from the Largest Online Marketplace in Pakistan<br>
+                           With over 15 million products to select from, Daraz offers its customers the most comprehensive listing of products in the country. Whether you’re looking for electronics, apparel, appliances, or groceries – there is something for everyone.
+                           <br><br>
+                           Hassle Free Delivery<br>
+                           Online shopping is only as good as its execution and Daraz promises hassle free delivery right from the moment you order to when your package is dropped at your door. We cater to both major and smaller cities alike, and give you the choice to track your package as it makes its way to you so you always know your order status. If you are unsatisfied with any aspect of your order, we have a simple 7-day return or exchange policy.
+                           <br><br>
+                           Payment Options to Suit Every Style<br>
+                           You can choose to pay through a credit/debit card, opt for cash on delivery or even go for EMI (easy monthly installments). You can also avail exclusive offers by downloading Daraz Wallet – a closed loop digital wallet that offers you a secure, easy way to make payments. We also have easypaisa & jazzcash payment method for our customers' ease
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <br>
+                     <div class="custom-heading">Shop from Verified Vendors</div><br>
+                     <div class="custom-text">
+                        Daraz understands that online shopping in Pakistan comes with its fair share of risks. This is why with Daraz Marketplace and Daraz Mall customers have the security of choosing from verified vendors and brands from Karachi, Lahore, Islamabad and all across Pakistan. Now you’ll never have to second guess authenticity because Daraz makes sure to do it for you!
+                        <br><br>
+                        Shop Around the World with Daraz Global Collection<br>
+                        International sellers and local convenience come together with Daraz Global collection. Get the chance to shop online from vendors around the world without leaving the Daraz website. Featuring thousands of novelty gadgets and accessories, Daraz Global Collection offers you a selection of products that you won’t find anywhere else when you’re online shopping in Pakistan.
+                        <br><br>
+                        Avail Exclusive Discounts, Offers, and Promotions<br>
+                        Online shopping with Daraz means you get the chance to avail exclusive online-only promotional packages as well as discount vouchers from our vendors when you shop from their pages. Our flash sales give you customized product offers all curated with the help of our advanced AI technology so you always have deals you’ll actually be interested in!
+                        <br><br>
+                        Buy Value, not Just Goods with Daraz Care<br>
+                        Daraz does not just cater online shopping in Pakistan but also aims to simplify the way you give back to society. With charities spanning across sectors of education, health care, environmental preservation, and shelters, you can choose to make a big difference with a few, simple clicks.
+                        <br><br>
+                        Simplify Corporate Purchases<br>
+                        Who says corporate purchases need to be a complicated affair? When you opt for Daraz Corporate, you get an efficient and transparent solution for your business’ bulk purchasing needs. We’re proud to be working with some of the most prestigious organizations in Pakistan across a number of different industries.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-3 bg-secondary" style="width: 19%;">
+               <br>
+               <div class="custom-heading">Top Categories & Brands</div><br>
+               <div class="custom-text-two">
+                  <div><strong>MOBILE PHONES IN PAKISTAN</strong></div>
+                  Apple iPhones, Honor Mobiles, Huawei Mobiles, Tecno Mobiles, Redmi Mobiles, Xiaomi Mi Mobiles, Nokia Mobiles, OnePlus Mobiles, Oppo Mobile Phones, Realme Mobiles, Samsung Mobile Phones, Vivo Mobile Phones, Mobile Accessories, Smart Watches
+                  <br><br>
+                  <div><strong>LATEST LAPTOPS</strong></div>
+                  Dell Laptops, HP Laptops, Lenovo Laptops, Mouse, Gaming Graphic Cards, lenovo ideapad 3, Macbook Pro 13, Hp Probook 650 G2
+                  <br><br>
+                  <div><strong>LED TV</strong></div>
+                  Changhong Led Tv, LG Led Tv, Samsung Led Tv, Sony Led Tv, TCL LED TVs
+                  <br><br>
+                  <div><strong>HOME APPLIANCES</strong></div>
+                  Microwave oven, Geyser, Heater, Refrigerators, Deep Freezers, Generators, Water Dispensers, Fans, Room Cooler, Table Fans, Wall Fans, Exhaust Fans, Pedestal Fans, Window Ac, Solar Panel, Washing Machine
+                  <br><br>
+                  <div><strong>DSLR CAMERAS</strong></div>
+                  Camera Tripods, Drones, IP & CCTV Cameras, Nikon D7000, Nikon D5600, Canon 200D, Canon 1200D, Fujifilm Instax Mini 11, Canon M50
+                  <br><br>
+                  <div><strong>HEALTH & BEAUTY</strong></div>
+                  sunisa foundation, Biofad, janssen facial kit, Glutathione Injection, Glutathione Cream Sauvage, Glutathione Tablets, Glutathione Soap, Infrared Thermometers, N95 Mask
+                  <br><br>
+                  <div><strong>TRENDING</strong></div>
+                  June Shopping Expo 2023, Azaadi Sale 2022, Shopping Expo, 11 11 Sale, 12.12 Sale, Live Cricket Streaming, Online Bills, Core I5 Laptop, Gtx 1060, Samsung A32, Samsung A51, Samsung A52, Samsung A71, Samsung A72, Samsung M31, Samsung S20, Samsung S20 Ultra 5G, Samsung S21, Samsung S21 Ultra, Samsung Z Flip, Tecno Camon 17, Tecno Spark 6, Vivo V20, Poco X3 Pro, Vivo V21, Vivo V21E, Vivo X70 Pro, Vivo Y12, Vivo Y12S, Vivo Y1S, Vivo Y20, Vivo Y51, Vivo Y51S, Oppo F19 Pro, Oppo Reno 6, Xiaomi Poco F3, Xiaomi Poco M3, Xiaomi Poco X3, Xiaomi Poco X3 Gt, Xiaomi Redmi 9C, Xiaomi Redmi Note 10 Pro, Sharp Aquos R2
+                  <br><br>
+                  <div><strong>SHOP WORLDWIDE WITH LAZADA</strong></div>
+                  Singapore, Malaysia, Philippines, Indonesia, Vietnam, Thailand
+               </div>
+            </div>
+            <div class="col-md-3" style="padding-right: 7%;"><br>
+
+               <div class="custom-text-two">
+                   <div><strong>WOMEN'S FASHION</strong></div>
+                   Al-Karam Studio, Warda, Salitex, Bonanza Satrangi, Edenrobe, Firdous, Junaid Jamshed, Limelight, Sana Safinaz, Mahru, Pushup Bra, Women Undergarments
+                   <br><br>
+                   <div><strong>MEN'S FASHION</strong></div>
+                   Men's Shirts, Men's T-Shirts
+                   <br><br>
+                   <div><strong>ONLINE GROCERY STORE</strong></div>
+                   Oil & Ghee, Basmati Rice, Dried Fruits, Chocolates, Mattresses
+                   <br><br>
+                   <div><strong>ONLINE BOOK STORE</strong></div>
+                   English Books, Islamic Books, History Books, English Literature Books, Kids Urdu Stories, Pride & Prejudice, Harry Potter Story Books, Namal Novel, Nimra Ahmed Novels
+                   <br><br>
+                   <div><strong>USED CARS FOR SALE</strong></div>
+                   Suzuki Wagon R, KIA Sportage, Honda City, Toyota Prado, Suzuki Alto, Suzuki Cultus, Honda Civic, Honda 125, Honda 70, Yamaha Ybr 125, Hi Speed 150, Hi Speed Freedom 200, Metro 70, Super Power 125, Monster JMS 3500 Electric Bike, Super Power 70, Car Accessories
+                   <br><br>
+                   <div><strong>AIR CONDITIONERS</strong></div>
+                   Kenwood Ac, Haier Ac, Gree Ac, Dawlance Ac, Orient Ac, Ecostar Ac, Inverex Solar Ac, Pel Ac
+                   <br><br>
+                   <div><strong>TOP MOBILE PHONES</strong></div>
+                   Nokia G20, redmi 9, realme 7 pro, realme c15, realme c21, vivo y20s, realme c11 Price in Pakistan, itel vision 1 pro price in pakistan, samsung galaxy a02 price in pakistan, Infinix Hot 10, Infinix Hot 8, Infinix Hot 9, Infinix Note 10 Pro, Infinix Note 7, Infinix Note 8, Infinix Zero 8, Inifnix Smart 5, iPhone 11, iPhone 12, iphone 12 Pro Max, iPhone 12 Pro, iPhone 6, Itel A25, Mi 10T, Nokia 105, Oppo A15, Oppo A15S, Oppo A53, Oppo A54, Infinix Zero X Pro, Infinix Zero X Neo, Oppo F19, Oppo Reno 5, Oppo Reno 5 Pro, Xiaomi Poco M3 Pro, Realme 6 Pro, Realme 8, Realme Narzo 30A, Samsung A02S, Samsung A11, Samsung A12, Samsung A31, Vivo Y33s, Infinix Note 11, Tecno Spark 6 Go, Samsung A52s, Samsung Tab A7 Lite, Oppo Reno 6 Pro
+                   <br><br>
+                   <div><strong>MEDICINE</strong></div>
+                   surbex z, tea tree oil, hydrozole cream, biotin tablets, evion capsule, lactogen 1, minoxidil, clobevate cream, centrum silver, maxdif cream, dermovate cream, cac 1000, Panadol Migraine
+               </div>
+           </div>
+           
+         </div>
+      </div>
+      </div>
+      </div>
       <!-- Bootstrap JS and dependencies -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
